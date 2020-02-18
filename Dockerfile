@@ -1,7 +1,5 @@
 FROM kalilinux/kali-linux-docker
 
-WORKDIR /root
-
 COPY .bashrc /root/.bashrc
 
 RUN [ "apt-get", "update" ]
@@ -14,5 +12,6 @@ RUN [ "apt-get", "install", "tcpspy", "-y" ]
 RUN [ "apt-get", "install", "tcpstat", "-y" ]
 RUN [ "apt-get", "install", "tcptrace", "-y" ]
 RUN [ "apt-get", "install", "net-tools", "-y" ]
+RUN [ "apt-get", "install", "netcat", "-y" ]
 
 WORKDIR /root/myspace
